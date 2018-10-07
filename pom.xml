@@ -66,9 +66,17 @@
     </licenses>
 
     <distributionManagement>
-        <snapshotRepository>
+        <!--snapshotRepository>
             <id>ossrh</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository-->
+        <repository>
+            <id>thirdparty-oss-local</id>
+            <url>https://dev.redbridge.se/artifactory/thirdparty-oss-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>thirdparty-oss-local</id>
+            <url>https://dev.redbridge.se/artifactory/thirdparty-oss-local</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -197,7 +205,7 @@
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <version>${nexus.staging.plugin.version}</version>
@@ -207,7 +215,7 @@
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
-            </plugin>
+            </plugin-->
         </plugins>
     </build>
 
